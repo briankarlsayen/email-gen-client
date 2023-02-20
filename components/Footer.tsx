@@ -1,56 +1,56 @@
-import React from "react";
-import { FaFacebookSquare, FaInstagramSquare, FaTwitter } from "react-icons/fa";
+import React from 'react';
+import { FaFacebookSquare, FaInstagramSquare, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   const products = [
-    "Why Mailchimp?",
-    "Product Updates",
-    "Email Marketing",
-    "Websites",
-    "Transactional Email",
-    "How We Compare",
-    "GDPR Compliance",
-    "Security",
-    "Status",
-    "Mobile App",
+    'Why Mailchimp?',
+    'Product Updates',
+    'Email Marketing',
+    'Websites',
+    'Transactional Email',
+    'How We Compare',
+    'GDPR Compliance',
+    'Security',
+    'Status',
+    'Mobile App',
   ];
   return (
-    <footer className="bg-secondary p-4 text-white mt-8">
-      <div className=" flex flex-row pb-4">
-        <div className="w-full">
-          <p className="text-xl pb-4">Products</p>
+    <footer className='bg-secondary p-4 text-white x-padding'>
+      <div className='pb-4 flex flex-row items-center flex-wrap justify-between'>
+        <div className='p-6'>
+          <p className='text-xl pb-4'>Products</p>
           <ul>
             {products.map((product, idx) => (
               <li key={idx}>{product}</li>
             ))}
           </ul>
         </div>
-        <div className="w-full">
-          <p className="text-xl pb-4">Products</p>
+        <div className='p-6'>
+          <p className='text-xl pb-4'>Products</p>
           <ul>
             {products.map((product, idx) => (
               <li key={idx}>{product}</li>
             ))}
           </ul>
         </div>
-        <div className="w-full">
-          <p className="text-xl pb-4">Products</p>
+        <div className='p-6'>
+          <p className='text-xl pb-4'>Products</p>
           <ul>
             {products.map((product, idx) => (
               <li key={idx}>{product}</li>
             ))}
           </ul>
         </div>
-        <div className="w-full">
-          <p className="text-xl pb-4">Products</p>
+        <div className='p-6'>
+          <p className='text-xl pb-4'>Products</p>
           <ul>
             {products.map((product, idx) => (
               <li key={idx}>{product}</li>
             ))}
           </ul>
         </div>
-        <div className="w-full">
-          <p className="text-xl pb-4">Products</p>
+        <div className='p-6'>
+          <p className='text-xl pb-4'>Products</p>
           <ul>
             {products.map((product, idx) => (
               <li key={idx}>{product}</li>
@@ -59,14 +59,14 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <div className="py-4 flex gap-4">
-        <div className="flex gap-2">
+      <div className='py-4 flex gap-4'>
+        <div className='flex gap-2'>
           <p>Follow us on:</p>
           <FaFacebookSquare size={42} />
           <FaInstagramSquare size={42} />
           <FaTwitter size={42} />
         </div>
-        <p className="text-sm">
+        <p className='text-sm'>
           ©2001-2022 All Rights Reserved. Mailchimp® is a registered trademark
           of The Rocket Science Group. Apple and the Apple logo are trademarks
           of Apple Inc. Mac App Store is a service mark of Apple Inc. Google
