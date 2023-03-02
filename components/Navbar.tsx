@@ -1,3 +1,4 @@
+import Router from 'next/router';
 import React from 'react';
 
 const Navbar = () => {
@@ -84,7 +85,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className='navbar-end'>
-        <a className='btn btn-primary'>Get started</a>
+        <a className='btn btn-primary' onClick={() => Router.push('login')}>
+          Get started
+        </a>
       </div>
     </nav>
   );

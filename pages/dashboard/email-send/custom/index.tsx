@@ -1,32 +1,32 @@
-import React from "react";
+import React from 'react';
 
 const Viewer = () => {
-  console.log("registering...");
+  console.log('registering...');
   return <div>I am a custom tool.</div>;
 };
 
-// unlayer.registerTool({
-//   name: "my_tool",
-//   label: "My Tool",
-//   icon: "fa-smile",
-//   supportedDisplayModes: ["web", "email"],
-//   options: {},
-//   values: {},
-//   renderer: {
-//     Viewer: Viewer, // our React Viewer
-//     exporters: {
-//       web: function (values) {
-//         return "<div>I am a custom tool.</div>";
-//       },
-//       email: function (values) {
-//         return "<div>I am a custom tool.</div>";
-//       },
-//     },
-//     head: {
-//       css: function (values) {},
-//       js: function (values) {},
-//     },
-//   },
-// });
+const tool = unlayer.registerTool({
+  name: 'my_tool',
+  label: 'My Tool',
+  icon: 'fa-smile',
+  supportedDisplayModes: ['web', 'email'],
+  options: {},
+  values: {},
+  renderer: {
+    Viewer: Viewer, // our React Viewer
+    exporters: {
+      web: function (values) {
+        return '<div>I am a custom tool.</div>';
+      },
+      email: function (values) {
+        return '<div>I am a custom tool.</div>';
+      },
+    },
+    head: {
+      css: function (values) {},
+      js: function (values) {},
+    },
+  },
+});
 
-export default Viewer;
+export default tool;

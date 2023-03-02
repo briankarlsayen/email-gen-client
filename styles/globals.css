@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .nunito {
-  font-family: "nunito", font-sans;
+  font-family: 'nunito', font-sans;
 }
 
 .border-b-1 {
@@ -21,10 +21,11 @@ hover\:border-none:hover {
   border-style: none;
 }
 
-#sidebar {
+/* #sidebar {
   transition: ease-in-out all 0.3s;
   z-index: 9999;
-}
+  width: 200px;
+} */
 
 #sidebar span {
   opacity: 0;
@@ -34,14 +35,25 @@ hover\:border-none:hover {
   /* opacity: 1; */
 }
 
-#sidebar:hover {
+/* #sidebar:hover {
   width: 200px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  /*shadow-2xl*/
-}
+} */
 
 #sidebar:hover span {
   opacity: 1;
+}
+
+.sidebar {
+  transition: ease-in-out all 0.3s;
+  z-index: 9999;
+  /* width: 200px; */
+}
+
+.sidebar-expand {
+  /* transition: ease-in-out all 0.3s; */
+  width: 200px !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 @tailwind base;
@@ -49,11 +61,15 @@ hover\:border-none:hover {
 @tailwind utilities;
 
 h1 {
-  @apply text-6xl;
+  @apply md:text-6xl text-3xl;
 }
 
 h2 {
-  @apply text-3xl font-semibold;
+  @apply md:text-3xl text-xl font-semibold;
+}
+
+p {
+  @apply lg:text-base text-sm;
 }
 
 .x-padding {
