@@ -86,7 +86,7 @@ const ClientDashboard = ({ children }: any) => {
                   />
                 </div>
               </label>
-              <ul
+              {/* <ul
                 tabIndex={0}
                 className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52'
               >
@@ -102,7 +102,7 @@ const ClientDashboard = ({ children }: any) => {
                 <li>
                   <a>Logout</a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </li>
         </ul>
