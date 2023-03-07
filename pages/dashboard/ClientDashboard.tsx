@@ -27,7 +27,7 @@ const ClientDashboard = ({ children }: any) => {
         onMouseEnter={expandSidebar}
         onMouseLeave={miniSidebar}
       >
-        <ul className='list-reset '>
+        <ul className='list-reset relative'>
           <li
             className='my-2 md:my-0'
             onClick={() => Router.push('/dashboard/email-generator')}
@@ -75,37 +75,39 @@ const ClientDashboard = ({ children }: any) => {
               </span>
             </label>
           </li>
-          <li className='my-2 md:my-0'>
-            <div className='float-right dropdown dropdown-end'>
-              <label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
-                <div className='w-10 rounded-full'>
-                  <Image
-                    className='h-full object-cover'
-                    src={pugImg}
-                    alt='pug'
-                  />
-                </div>
-              </label>
-              {/* <ul
-                tabIndex={0}
-                className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52'
-              >
-                <li>
-                  <a className='justify-between'>
-                    Profile
-                    <span className='badge'>New</span>
-                  </a>
-                </li>
-                <li>
-                  <a>Settings</a>
-                </li>
-                <li>
-                  <a>Logout</a>
-                </li>
-              </ul> */}
-            </div>
-          </li>
         </ul>
+        <div className='absolute bottom-4 group'>
+          <div className='p-2 hover:bg-indigo-400'>
+            <Image
+              className='h-8 w-8 object-cover rounded-full'
+              src={pugImg}
+              alt='pug'
+              tabIndex={0}
+            />
+          </div>
+          <nav
+            tabIndex={0}
+            className='border text-black bg-white invisible border-gray-800 rounded w-60 absolute left-0 bottom-full transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1'
+          >
+            <ul className='py-1'>
+              <li>
+                <a href='#' className='block px-4 py-2 hover:bg-gray-100'>
+                  Edit
+                </a>
+              </li>
+              <li>
+                <a href='#' className='block px-4 py-2 hover:bg-gray-100'>
+                  Delete
+                </a>
+              </li>
+              <li>
+                <a href='#' className='block px-4 py-2 hover:bg-gray-100'>
+                  Reply
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
       <div className='h-56'>
